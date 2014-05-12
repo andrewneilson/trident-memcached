@@ -193,6 +193,7 @@ public class MemcachedState<T> implements IBackingMap<T> {
         _client = client;
         _opts = opts;
         _ser = ser;
+        _mexceptions = new CountMetric();
 
     }
 
@@ -268,7 +269,7 @@ public class MemcachedState<T> implements IBackingMap<T> {
     }
 
     private void registerMetrics(Map conf, IMetricsContext context) {
-      int bucketSize = (int)(conf.get(Config.TOPOLOGY_BUILTIN_METRICS_BUCKET_SIZE_SECS));
+      Integer bucketSize = (Integer)(conf.get(Config.TOPOLOGY_BUILTIN_METRICS_BUCKET_SIZE_SECS));
       _mreads = context.registerMetric("memcached/readCount", new CountMetric(), bucketSize);
       _mwrites = context.registerMetric("memcached/writeCount", new CountMetric(), bucketSize);
       _mexceptions = context.registerMetric("memcached/exceptionCount", new CountMetric(), bucketSize);
