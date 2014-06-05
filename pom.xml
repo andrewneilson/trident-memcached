@@ -3,7 +3,7 @@
     <groupId>storm</groupId>
     <artifactId>trident-memcached</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.5-wip3</version>
+    <version>0.0.5-wip4</version>
     <name>trident-memcached</name>
     <description/>
     <scm>
@@ -53,14 +53,14 @@
             </plugin>
         </plugins>
     </build>
-  
-  
+
+
     <repositories>
         <repository>
             <id>central-local</id>
             <name>Central</name>
             <url>https://metamx.artifactoryonline.com/metamx/pub-libs-releases-local</url>
-        </repository> 
+        </repository>
         <repository>
             <id>central</id>
             <url>http://repo1.maven.org/maven2/</url>
@@ -92,8 +92,8 @@
             </releases>
         </repository>
     </repositories>
-  
-  
+
+
     <dependencies>
         <dependency>
             <groupId>com.thimbleware.jmemcached</groupId>
@@ -106,11 +106,11 @@
                     <groupId>org.slf4j</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>      
+        </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>finagle-memcached_2.9.2</artifactId>
-            <version>6.13.0</version>
+            <artifactId>finagle-memcached_2.10</artifactId>
+            <version>6.16.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -118,30 +118,19 @@
                 </exclusion>
                 <exclusion>
                     <groupId>com.twitter</groupId>
-                    <artifactId>util-hashing_2.9.2</artifactId>
+                    <artifactId>util-hashing_2.10</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>util-hashing_2.9.2</artifactId>
-            <version>6.13.0</version>
-        </dependency>   
+            <artifactId>util-hashing_2.10</artifactId>
+            <version>6.16.0</version>
+        </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>util-core_2.9.2</artifactId>
-            <version>6.13.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.guava</groupId>
-                    <artifactId>guava</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency> 
-        <dependency>
-            <groupId>com.twitter</groupId>
-            <artifactId>util-collection_2.9.2</artifactId>
-            <version>6.13.0</version>
+            <artifactId>util-core_2.10</artifactId>
+            <version>6.16.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -151,8 +140,8 @@
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>util-logging_2.9.2</artifactId>
-            <version>6.13.0</version>
+            <artifactId>util-collection_2.10</artifactId>
+            <version>6.16.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -162,8 +151,19 @@
         </dependency>
         <dependency>
             <groupId>com.twitter</groupId>
-            <artifactId>finagle-core_2.9.2</artifactId>
-            <version>6.13.0</version>
+            <artifactId>util-logging_2.10</artifactId>
+            <version>6.16.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>finagle-core_2.10</artifactId>
+            <version>6.16.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
